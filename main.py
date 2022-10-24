@@ -18,15 +18,13 @@ def board():
     print("  ----------")
     print(3, dic['A3'],"|", dic['B3'],"|", dic['C3'])
 
-# Ta pętla wyświetla plansze i prosi o podanie numeru pola na planszy
+
 while game_on==True:
     
     board()
     p1 = input("Zawodnik nr 1 wybirerz pole, gdzie chcesz postawić X: ")
     
-    # Ta pętla sprawdza czy wpisany znak znajduje się na planszy, jeśli nie jest wyświetla się
-    # prośba o podanie własciwego pola, jeśli pole jest prawidłowe wówczas do pola zostaje przypisany 
-    # odpowiedni znak i sprawdza się to, czy w kolejnych polach znajdują się te same znaki
+    
     while right_sign==False:
         if p1 in dic and dic[p1]==" " and dic[p1]!="O":
             dic[p1]='X'
